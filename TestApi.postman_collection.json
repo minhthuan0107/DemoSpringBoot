@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "1dc7b1e1-4bee-4e4f-8d47-c64613a320e7",
+		"name": "TestApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29320929"
+	},
+	"item": [
+		{
+			"name": "addProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productName\": \"Product G\",\r\n  \"quantity\": 100,\r\n  \"price\": 49.99,\r\n  \"discount\": 5.0,\r\n  \"description\": \"Sample product\",\r\n  \"enteredDate\": \"2024-09-29\",\r\n  \"status\": true,\r\n  \"sold\": 0,\r\n  \"category\": {\r\n    \"categoryId\": 2\r\n  },\r\n  \"productImages\": [\r\n    {\r\n      \"imageUrl\": \"http://image.url/sample1.jpg\"\r\n    },\r\n    {\r\n      \"imageUrl\": \"http://image.url/sample2.jpg\"\r\n    }\r\n  ],\r\n  \"colors\": [\r\n    {\r\n      \"colorId\": 1\r\n    },\r\n    {\r\n      \"colorId\": 2\r\n    }\r\n  ],\r\n  \"sizes\": [\r\n    {\r\n      \"sizeId\": 1\r\n    },\r\n    {\r\n      \"sizeId\": 2\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/api/products",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductByCategoryId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/api/products/category/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"products",
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategoryById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/api/category/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/api/category",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/api/products/4",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"products",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
